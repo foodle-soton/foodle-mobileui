@@ -1,12 +1,40 @@
 <?php
-$outlet = "";
+// Open CSV file of outlets
+$csvfile = file_get_contents('./data.csv');
+
+$data = array(
+    array(
+        "outlet" => "Piazza",
+        "category" => "Joe's Wraps",
+        "food" => "Cajun Chicken",
+        "price" => 2.50
+    ),
+    array(
+        "outlet" => "Piazza",
+        "category" => "Chicago Town",
+        "food" => "Pepperoni Pizza",
+        "price" => 2.50
+    ),
+    array(
+        "outlet" => "Cafe",
+        "category" => "Breakfast",
+        "food" => "Sausage",
+        "price" => 0.50
+    )
+);
+
+$outlets = array_column($data, "outlet");
+
+var_dump($outlets);
+
 
 // Check for o parameter passed with GET
+$outlet = "";
 if(isset($_GET['o'])) {
     $outlet = $_GET['o'];
 }
 
-// Search database for outlet
+
 
 include_once "header.php"; ?>
     <!-- NAV BAR -->
@@ -20,7 +48,7 @@ include_once "header.php"; ?>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Foodle.</a>
+                <a class="navbar-brand" href="#">Foodlr</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
