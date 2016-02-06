@@ -1,5 +1,6 @@
 body {
-    background: url('../images/bg.png') no-repeat;
+    background: url('http://www.wagamama.com/~/media/WagamamaMainsite/food-category-images/omakase.jpg') no-repeat;
+    color: #fff;
 }
 
 .navbar-text {
