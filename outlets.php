@@ -23,7 +23,7 @@ $data = array(
     )
 );
 
-$outlets = array_column($data, "outlet");
+$outlets = array_unique(array_column($data, "outlet"));
 
 var_dump($outlets);
 
