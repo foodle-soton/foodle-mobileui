@@ -23,6 +23,7 @@ $data = array(
     )
 );
 
+// Produce set of outlets as array
 $outlets = array_unique(array_column($data, "outlet"));
 
 var_dump($outlets);
@@ -56,6 +57,12 @@ include_once "header.php"; ?>
                 <ul class="nav navbar-nav">
                     <p class="navbar-text">Choose a food outlet:</p>
                     <!-- PULL HEADINGS HERE OUT OF DATABASE -->
+                    <?php
+                        foreach($outlets as $o)
+                            echo "<li><a href=\"#\">" . $o . "</a></li>";
+
+
+                    ?>
                     <li><a href="#">Link1</a></li>
                     <li><a href="#">Link2</a></li>
                     <li><a href="#">Link3</a></li>
