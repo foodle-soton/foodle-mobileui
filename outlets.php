@@ -58,6 +58,22 @@ include_once "header.php"; ?>
                 <td>£1.50</td>
             </tr>
         </table>
+
+        <h3>Joe's Wraps</h3>
+        <table>
+            <tr>
+                <td class="colHeading">Item</td>
+                <td class="colHeading">Cost</td>
+            </tr>
+            <tr>
+                <td>Baguette</td>
+                <td>£2.30</td>
+            </tr>
+            <tr>
+                <td>Coffee</td>
+                <td>£1.50</td>
+            </tr>
+        </table>
     </div>
 
 
