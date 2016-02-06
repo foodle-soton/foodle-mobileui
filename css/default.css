@@ -15,3 +15,9 @@
 h4 {
     margin-top: 100px;
 }
+
+/* BOOTSTRAP OVERRIDDEN STYLES */
+.navbar-default,
+.navbar-toggle {
+    border: none;
+}
