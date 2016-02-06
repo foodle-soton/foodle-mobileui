@@ -26,27 +26,30 @@
         </div><!-- /.container-fluid -->
     </nav>
 
-    <!-- MAIN HEADING -->
-    <h2><!-- OUTLET NAME--></h2>
+    <!-- MAIN CONTENT WRAPPER -->
+    <div class="wrapper">
+        <!-- MAIN HEADING -->
+        <h2><!-- OUTLET NAME--></h2>
 
-    <!-- CUISINES -->
+        <!-- CUISINES -->
 
-    <!-- TEMPLATE -->
-    <h3>Piazza</h3>
-    <table>
-        <tr>
-            <td>Item</td>
-            <td>Cost</td>
-        </tr>
-        <tr>
-            <td>Baguette</td>
-            <td>£2.30</td>
-        </tr>
-        <tr>
-            <td>Coffee</td>
-            <td>£1.50</td>
-        </tr>
-    </table>
+        <!-- TEMPLATE -->
+        <h3>Piazza</h3>
+        <table>
+            <tr>
+                <td>Item</td>
+                <td>Cost</td>
+            </tr>
+            <tr>
+                <td>Baguette</td>
+                <td>£2.30</td>
+            </tr>
+            <tr>
+                <td>Coffee</td>
+                <td>£1.50</td>
+            </tr>
+        </table>
+    </div>
 
 
 <?php include_once "footer.php"; ?>
