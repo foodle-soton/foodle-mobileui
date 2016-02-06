@@ -41,6 +41,7 @@
 
         <!-- MAIN HEADING -->
         <h2>Welcome to Foodle</h2>
+        <h4>Click on the menu icon above to select a food outlet!</h4>
 
         <!-- SCRIPTS -->
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
