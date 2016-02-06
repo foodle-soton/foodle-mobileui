@@ -37,8 +37,8 @@
         <h3>Street Food</h3>
         <table>
             <tr>
-                <td>Item</td>
-                <td>Cost</td>
+                <td class="colHeading">Item</td>
+                <td class="colHeading">Cost</td>
             </tr>
             <tr>
                 <td>Baguette</td>
