@@ -1,12 +1,10 @@
 <?php
 $outlet = "";
 
-if(isset($_POST['o'])) {
-    $outlet = $_POST['o'];
+// Check for o parameter passed with GET
+if(isset($_GET['o'])) {
+    $outlet = $_GET['o'];
 }
-
-
-
 
 
 include_once "header.php"; ?>
