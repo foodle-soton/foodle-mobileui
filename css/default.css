@@ -17,7 +17,38 @@ h4 {
 }
 
 /* BOOTSTRAP OVERRIDDEN STYLES */
-.navbar-default,
-.navbar-toggle {
+.navbar-default {
+    background-color: #fff;
     border: none;
 }
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-brand:hover {
+    color: #000;
+}
+
+.navbar-default .navbar-toggle {
+    border: none;
+}
+
+.navbar-toggle {
+    border-radius: 0;
+}
+
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+    background-color: #000;
+    /* MAKE LINES CHANGE COLOR */
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
+.navbar-toggle .icon-bar {
+    border-radius: 0;
+}
+
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form
