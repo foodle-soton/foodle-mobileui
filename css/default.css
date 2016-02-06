@@ -28,6 +28,7 @@ h4 {
 }
 
 h2 {
+    font-family: 'Lato', sans-serif;
     margin-top: 0;
 }
 
@@ -41,6 +42,7 @@ h2 {
 .navbar-default .navbar-brand:focus,
 .navbar-default .navbar-brand:hover {
     color: #000;
+    font-family: 'Lato', sans-serif;
 }
 
 .navbar-brand {
@@ -72,7 +74,7 @@ h2 {
 
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
-    border-color: #000;
+    border-color: #ccc;
 }
 
 .navbar-default {
