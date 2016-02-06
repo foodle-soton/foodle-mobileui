@@ -1,5 +1,10 @@
+body {
+    background: url('../images/bg.png') no-repeat;
+}
+
 .navbar-text {
-    font-weight: bold;
+    margin: 15px;
+    font-size: 1.3em;
 }
 
 .wrapper, table {
@@ -30,6 +35,7 @@ h4 {
 
 .navbar-default .navbar-toggle {
     border: none;
+    background: #000;
 }
 
 .navbar-toggle {
@@ -51,4 +57,34 @@ h4 {
 }
 
 .navbar-default .navbar-collapse,
-.navbar-default .navbar-form
+.navbar-default .navbar-form {
+    border-color: #000;
+}
+
+.navbar-default {
+    color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
