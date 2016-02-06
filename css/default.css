@@ -6,7 +6,7 @@ body {
 }
 
 .navbar-text {
-    margin: 15px;
+    margin: 10px;
     font-size: 1.3em;
 }
 
@@ -87,7 +87,9 @@ h2 {
     color: #000;
 }
 
-
+.nav > li > a {
+    padding: 10px 25px;
+}
 
 
 
