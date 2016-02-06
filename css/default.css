@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
 body {
     background: url('http://www.wagamama.com/~/media/WagamamaMainsite/hero-pod-images/omakase.jpg') no-repeat;
     color: #000;
@@ -26,7 +28,7 @@ h4 {
 }
 
 h2 {
-    margin-top: 10px;
+    margin-top: 0;
 }
 
 /* BOOTSTRAP OVERRIDDEN STYLES */
@@ -81,7 +83,9 @@ h2 {
     color: #000;
 }
 
-
+.navbar-default .navbar-nav > li > a {
+    color: #000;
+}
 
 
 
