@@ -29,12 +29,12 @@
     <!-- MAIN CONTENT WRAPPER -->
     <div class="wrapper">
         <!-- MAIN HEADING -->
-        <h2><!-- OUTLET NAME--></h2>
+        <h2><!-- OUTLET NAME (TEMPLATE)-->Piazza</h2>
 
         <!-- CUISINES -->
 
         <!-- TEMPLATE -->
-        <h3>Piazza</h3>
+        <h3>Street Food</h3>
         <table>
             <tr>
                 <td>Item</td>
