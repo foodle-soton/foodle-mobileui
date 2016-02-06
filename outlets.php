@@ -1,4 +1,15 @@
-<?php include_once "header.php"; ?>
+<?php
+$outlet = "";
+
+if(isset($_POST['o'])) {
+    $outlet = $_POST['o'];
+}
+
+
+
+
+
+include_once "header.php"; ?>
     <!-- NAV BAR -->
     <nav class="navbar navbar-default">
         <div class="container-fluid">
@@ -29,7 +40,7 @@
     <!-- MAIN CONTENT WRAPPER -->
     <div class="wrapper">
         <!-- MAIN HEADING -->
-        <h2><!-- OUTLET NAME (TEMPLATE)-->Piazza</h2>
+        <h2><?php echo $outlet ?></h2>
 
         <!-- CUISINES -->
 
