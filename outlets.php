@@ -59,7 +59,7 @@ include_once "header.php"; ?>
                     <!-- PULL HEADINGS HERE OUT OF DATABASE -->
                     <?php
                         foreach($outlets as $o)
-                            echo "<li><a href=\"o?=" . str_replace(' ', '', str_replace('\'', '', $o)) . "\">" . $o . "</a></li>";
+                            echo "<li><a href=\"./outlets.php?=" . str_replace(' ', '', str_replace('\'', '', $o)) . "\">" . $o . "</a></li>";
 
 
                     ?>
