@@ -6,6 +6,7 @@ if(isset($_GET['o'])) {
     $outlet = $_GET['o'];
 }
 
+// Search database for outlet
 
 include_once "header.php"; ?>
     <!-- NAV BAR -->
@@ -38,7 +39,7 @@ include_once "header.php"; ?>
     <!-- MAIN CONTENT WRAPPER -->
     <div class="wrapper">
         <!-- MAIN HEADING -->
-        <h2><?php echo $outlet ?></h2>
+        <h1><?php echo $outlet ?></h1>
 
         <!-- CUISINES -->
 
