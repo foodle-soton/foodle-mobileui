@@ -25,10 +25,17 @@
                 } elseif($outlet == "terrace") {
                     echo "lat = 50.9352341;\n";
                     echo "long = -1.3976905;\n";
-                 } elseif ($outlet == "arlott") {
+                } elseif ($outlet == "arlott") {
                     echo "lat = 50.934794;\n";
                     echo "long = -1.3982056;\n";
+                } elseif ($outlet == "cafe") {
+                    echo "lat = 50.9289066;\n";
+                    echo "long = -1.4032304;\n";
+                } elseif ($outlet == "avenue") {
+                    echo "lat = 50.9285938;\n";
+                    echo "long = -1.4035525;\n";
                 }
+
             ?>
 
             var getGeoLocation = function() {
