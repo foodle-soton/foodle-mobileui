@@ -34,7 +34,7 @@ include_once "header.php";
     <!-- MAIN CONTENT WRAPPER -->
     <div class="wrapper">
         <!-- MAIN HEADING -->
-        <h1><?php if($exists) echo ucfirst($outlet) . "<a href=\"#\"><img src=\"http://www.broadmeadowmedical.com.au/wp-content/uploads/2013/04/Google_Maps_Icon.png\" height=\"45px\" /></a>" ?></h1>
+        <h1><?php if($exists) echo ucfirst($outlet) . "<a href=\"./navigate.php?o=" . $outlet . "\"><img src=\"http://www.broadmeadowmedical.com.au/wp-content/uploads/2013/04/Google_Maps_Icon.png\" height=\"45px\" /></a>" ?></h1>
 
         <!-- CATEGORIES -->
         <?php
