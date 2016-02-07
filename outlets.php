@@ -1,43 +1,8 @@
 <?php
-// Open CSV file of outlets
-$csvfile = file_get_contents('./data.csv');
-
-$data = array(
-    array(
-        "outlet" => "Piazza",
-        "category" => "Joe's Wraps",
-        "food" => "Cajun Chicken",
-        "price" => 2.50
-    ),
-    array(
-        "outlet" => "Piazza",
-        "category" => "Chicago Town",
-        "food" => "Pepperoni Pizza",
-        "price" => 2.50
-    ),
-    array(
-        "outlet" => "Cafe",
-        "category" => "Breakfast",
-        "food" => "Sausage",
-        "price" => 0.50
-    )
-);
-
-// Produce set of outlets as array
-$outlets = array_unique(array_column($data, "outlet"));
-
-var_dump($outlets);
-
-
-// Check for o parameter passed with GET
-$outlet = "";
-if(isset($_GET['o'])) {
-    $outlet = $_GET['o'];
-}
-
-
-
-include_once "header.php"; ?>
+include_once "mobileCheck.php"; // Redirect to www.foodlr.org if not a mobile device
+include_once "getData.php";
+include_once "header.php";
+?>
     <!-- NAV BAR -->
     <nav class="navbar navbar-default">
         <div class="container-fluid">
@@ -49,19 +14,17 @@ include_once "header.php"; ?>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Foodlr</a>
+                <a class="navbar-brand" href="./">Foodlr</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <p class="navbar-text">Choose a food outlet:</p>
-                    <!-- PULL HEADINGS HERE OUT OF DATABASE -->
+                    <!-- PULL HEADINGS HERE OUT OF CSV -->
                     <?php
                         foreach($outlets as $o)
-                            echo "<li><a href=\"./outlets.php?=" . str_replace(' ', '', str_replace('\'', '', $o)) . "\">" . $o . "</a></li>";
-
-
+                            echo "<li><a href=\"./outlets.php?o=" . str_replace(' ', '', str_replace('\'', '', $o)) . "\">" . ucfirst($o) . "</a></li>";
                     ?>
                 </ul>
             </div><!-- /.navbar-collapse -->
@@ -71,43 +34,44 @@ include_once "header.php"; ?>
     <!-- MAIN CONTENT WRAPPER -->
     <div class="wrapper">
         <!-- MAIN HEADING -->
-        <h1><?php echo $outlet ?></h1>
+        <h1><?php if($exists) echo ucfirst($outlet) . "<a href=\"#\"><img src=\"http://www.broadmeadowmedical.com.au/wp-content/uploads/2013/04/Google_Maps_Icon.png\" height=\"45px\" /></a>" ?></h1>
 
-        <!-- CUISINES -->
+        <!-- CATEGORIES -->
+        <?php
+            if ($exists) {
+                $outletFoods = array();
 
-        <!-- TEMPLATE -->
-        <h3>Street Food</h3>
-        <table>
-            <tr>
-                <td class="colHeading">Item</td>
-                <td class="colHeading">Cost</td>
-            </tr>
-            <tr>
-                <td>Baguette</td>
-                <td>£2.30</td>
-            </tr>
-            <tr>
-                <td>Coffee</td>
-                <td>£1.50</td>
-            </tr>
-        </table>
+                // Get all entries for given outlet
+                foreach ($data as $row) {
+                    if ($row["outlet"] == $outlet) {
+                        array_push($outletFoods, $row);
+                    }
+                }
 
-        <h3>Joe's Wraps</h3>
-        <table>
-            <tr>
-                <td class="colHeading">Item</td>
-                <td class="colHeading">Cost</td>
-            </tr>
-            <tr>
-                <td>Baguette</td>
-                <td>£2.30</td>
-            </tr>
-            <tr>
-                <td>Coffee</td>
-                <td>£1.50</td>
-            </tr>
-        </table>
+                // Build categories as tables
+                $lastSeen = "";
+                $firstRun = true;
+                foreach ($outletFoods as $row) {
+                    if ($lastSeen != $row["category"]) {
+                        if ($firstRun) {
+                            $firstRun = false;
+                        } else {
+                            echo "</table>\n";
+                        }
+                        $lastSeen = $row["category"];
+                        echo "<h3>" . $row["category"] . "</h3>\n";
+                        echo "<table>\n";
+                        echo "<tr><td class=\"colHeading\">Item</td><td class=\"colHeading\">Cost</td></tr>\n";
+                    }
+                    echo "<tr>\n<td>" . $row["food"] . "</td>\n";
+                    echo "<td>£" . number_format($row["price"], 2) . "</td>\n</tr>\n";
+
+                }
+                echo "</table>\n";
+            } else {
+                echo "<h1>404</h1>\nThat's an error.";
+            }
+        ?>
     </div>
-
 
 <?php include_once "footer.php"; ?>

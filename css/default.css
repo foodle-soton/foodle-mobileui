@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Lato);
 
 body {
-    background: url('http://www.wagamama.com/~/media/WagamamaMainsite/hero-pod-images/omakase.jpg') no-repeat;
+    background: url('http://www.wagamama.com/~/media/WagamamaMainsite/hero-pod-images/omakase.jpg') repeat-y;
     color: #000;
 }
 
@@ -14,8 +14,9 @@ body {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 20px;
     background: #fff;
-    width: 60%;
+    width: 80%;
     padding: 20px;
 }
 
@@ -23,13 +24,10 @@ body {
     font-weight: bold;
 }
 
-h4 {
-    margin-top: 100px;
-}
-
-h1 {
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     font-family: 'Lato', sans-serif;
     margin-top: 0;
+    font-weight: normal;
 }
 
 /* BOOTSTRAP OVERRIDDEN STYLES */
@@ -96,7 +94,9 @@ h1 {
 
 
 
-
+img {
+    margin-left: 20px;
+}
 
 
 
