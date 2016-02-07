@@ -1,41 +1,34 @@
 <?php
-$outlet = "";
-if(isset($_GET['o'])) {
-    $outlet = $_GET['o'];
-}
-
+    $outlet = "";
+    if(isset($_GET['o'])) {
+        $outlet = $_GET['o'];
+    }
 ?>
 
 <!DOCTYPE html>
 <html>
     <head>
-
+        <title>Foodlr - Navigation to <?php echo ucfirst($outlet) ?></title>
     </head>
 <!--    <input id = "clickMe" type="button" value = "clickme" onclick = "loadScript(50.935,-1.396);"/>-->
     <body>
         <div id="googleMap"></div>
-
-
 
         <script>
             var long, lat;
             var myLong, myLat;
 
             <?php
-            if($outlet == "piazza") {
-                echo "lat = 50.9343606;\n";
-                echo "long = -1.3972823;\n";
-            } elseif($outlet == "terrace") {
-                echo "lat = 50.9352341;\n";
-                echo "long = -1.3976905;\n";
-             } elseif ($outlet == "arlott") {
-                echo "lat = 50.934794;\n";
-                echo "long = -1.3982056;\n";
-            }
-
-
-
-
+                if($outlet == "piazza") {
+                    echo "lat = 50.9343606;\n";
+                    echo "long = -1.3972823;\n";
+                } elseif($outlet == "terrace") {
+                    echo "lat = 50.9352341;\n";
+                    echo "long = -1.3976905;\n";
+                 } elseif ($outlet == "arlott") {
+                    echo "lat = 50.934794;\n";
+                    echo "long = -1.3982056;\n";
+                }
             ?>
 
             var getGeoLocation = function() {
@@ -85,7 +78,7 @@ if(isset($_GET['o'])) {
             document.getElementById('googleMap').setAttribute("style","height:" + window.innerHeight + "px;width:" + window.innerWidth + "px");
 
             loadScript();
-            
+
         </script>
     </body>
 </html>
